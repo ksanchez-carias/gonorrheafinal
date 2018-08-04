@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>document</title>
+  <link href="gonorrheastylesheet.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">
+  <link rel="stylesheet" media="screen and (max-width: 550px)" href="mobilestylesheet.css" />
+</head>
+<body>
+  <h1>Gonorrhea</h1>
+  <div class="navbar">
+
+    <div class="dropdown">
+      <button class="dropbtn">Gonorrhea Information
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="history.html ">History of Gonorrhea</a>
+        <a href="symptoms.html ">Symptoms of Gonorrhea</a>
+        <a href="effects.html ">Effects of Gonorrhea</a>
+        <a href="diagnosis.html ">Diagnosis of Gonorrhea</a>
+        <a href="treatments.html ">Treatments for Gonorrhea</a>
+        <a href="prevention.html ">Prevention of Gonorrhea</a>
+        <a href="statistics.html ">Statistics</a>
+      </div>
+    </div>
+    <a href="product.html">Product</a>
+    <a href="about.html">About Us</a>
+  </div>
+  <div class="mySlides fade">
+      <div class="numbertext">1 / 18</div>
+      <img src="IM1.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">2 / 18</div>
+      <img src="IM2.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">3 / 18</div>
+      <img src="IMG_0066.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">4 / 18</div>
+      <img src="IMG_0067.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">5 / 18</div>
+      <img src="IMG_0068.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">6 / 18</div>
+      <img src="IMG_0069.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">7 / 18</div>
+      <img src="IMG_0070.jpg" style="width:100%" height="610px">
+  </div>
+
+  <div class="mySlides fade">
+      <div class="numbertext">8 / 18</div>
+      <img src="IMG_0071.jpg" style="width:100%" height="610px">
+  </div>
+</div>
+
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+ 
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+  function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+  }
+</script>
+
+</body>
+
+</html>
